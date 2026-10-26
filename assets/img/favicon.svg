@@ -1,4 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 28 28">
-  <rect x="1.5" y="1.5" width="25" height="25" rx="8" fill="#0b0d12" stroke="#eef0f5" stroke-width="2"/>
-  <circle cx="14" cy="14" r="5.5" fill="none" stroke="#f4b740" stroke-width="2.5"/>
+  <defs>
+    <linearGradient id="deskfocus-logo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="55%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+  </defs>
+  <rect x="1.5" y="1.5" width="25" height="25" rx="8" fill="#0b0b12" stroke="url(#deskfocus-logo)" stroke-width="2"/>
+  <circle cx="14" cy="14" r="5.5" fill="none" stroke="url(#deskfocus-logo)" stroke-width="2.5"/>
 </svg>
