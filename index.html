@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DeskFocus — Today's tasks and focus, in one widget</title>
+  <meta name="description" content="DeskFocus brings iCloud Reminders, Google Calendar and Google Tasks into one macOS widget, with a focus timer on every task and the apps you choose kept quiet.">
+  <meta property="og:title" content="DeskFocus — Today's tasks and focus, in one widget">
+  <meta property="og:description" content="Your tasks and a focus timer in one macOS widget.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main">
+      <a class="brand" href="#top">
+        <svg class="brand__logo" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+          <rect x="1.5" y="1.5" width="25" height="25" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="14" cy="14" r="5.5" fill="none" stroke="var(--color-accent)" stroke-width="2.5"/>
+        </svg>
+        <span class="brand__name">DeskFocus</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="https://github.com/bilgaaaaa/deskfocus">GitHub</a></li>
+      </ul>
+      <a class="button button--primary button--small" href="#download">Download</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero: headline plus the interactive widget preview. -->
+    <section id="top" class="section hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <span class="pill">A desktop widget for macOS</span>
+          <h1 class="hero__title">Today's tasks.<br>One focus.<br><span class="text-accent">One widget.</span></h1>
+          <p class="lead">DeskFocus brings your reminders, calendar and Google Tasks into a single widget, and starts a focus timer on whichever task you pick — with the apps you choose kept quiet until you're done.</p>
+          <div class="button-row">
+            <a class="button button--primary" href="#download">
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>
+              Download for macOS
+            </a>
+            <a class="button button--ghost" href="https://github.com/bilgaaaaa/deskfocus">View on GitHub</a>
+          </div>
+          <p class="fine-print">Requires [MACOS VERSION] or later.</p>
+        </div>
+
+        <div class="widget" role="group" aria-label="Interactive DeskFocus widget preview" data-widget>
+          <div class="widget__header">
+            <span class="widget__title">Today</span>
+            <span class="widget__meta" data-widget-progress>0 of 0 done</span>
+          </div>
+
+          <div class="widget__focus">
+            <svg class="timer-ring" width="104" height="104" viewBox="0 0 104 104" role="img" aria-label="Focus progress">
+              <circle class="timer-ring__track" cx="52" cy="52" r="44"/>
+              <circle class="timer-ring__value" cx="52" cy="52" r="44" data-timer-ring/>
+              <text class="timer-ring__label" x="52" y="58" text-anchor="middle" data-timer-label>25:00</text>
+            </svg>
+            <div class="widget__focus-info">
+              <span class="widget__meta">Focusing on</span>
+              <span class="widget__task-name" data-selected-title aria-live="polite"></span>
+              <div class="widget__controls">
+                <button type="button" class="button button--primary button--compact" data-timer-toggle>Start</button>
+                <button type="button" class="button button--ghost button--icon" data-timer-reset aria-label="Reset timer">
+                  <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <ul class="task-list" data-task-list></ul>
+
+          <div class="widget__footer">
+            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/><path d="m3 3 18 18"/></svg>
+            <span data-muted-summary></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features: alternating text and visual rows. -->
+    <section id="features" class="section section--bordered" aria-labelledby="features-title">
+      <div class="container section-heading">
+        <span class="eyebrow">Why DeskFocus</span>
+        <h2 id="features-title" class="section-title">Planning and focusing shouldn't live in two different apps.</h2>
+        <p class="lead">DeskFocus keeps what you need to do today and the timer for doing it side by side, right on your desktop.</p>
+      </div>
+
+      <div class="container features">
+        <article class="feature">
+          <div class="feature__copy">
+            <span class="badge">Included</span>
+            <h3 class="feature__title">All your lists, one widget.</h3>
+            <p class="lead">Reminders from iCloud, events from Google Calendar and tasks from Google Tasks land together in today's list. No copying things between apps.</p>
+          </div>
+          <div class="panel feature__visual">
+            <div class="source-row">
+              <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" class="icon icon--secondary"><path d="M17.5 19a4.5 4.5 0 0 0 0-9h-1.3A7 7 0 1 0 5 16.3"/><path d="M9 19h8.5"/></svg>
+              <span>iCloud Reminders</span>
+            </div>
+            <div class="source-row">
+              <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" class="icon icon--secondary"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+              <span>Google Calendar</span>
+            </div>
+            <div class="source-row">
+              <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" class="icon icon--secondary"><path d="m4 12 5 5L20 6"/></svg>
+              <span>Google Tasks</span>
+            </div>
+            <svg class="source-arrow" width="24" height="32" viewBox="0 0 24 32" aria-hidden="true"><path d="M12 2v26M5 21l7 7 7-7"/></svg>
+            <div class="source-row source-row--active">
+              <span class="widget__title">Today</span>
+              <span class="text-accent">One list</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature feature--reversed">
+          <div class="feature__copy">
+            <span class="badge">Included</span>
+            <h3 class="feature__title">A focus timer on every task.</h3>
+            <p class="lead">Pick a task and start focusing on it. The timer belongs to the task, so you always know what the next block of time is for.</p>
+          </div>
+          <div class="panel feature__visual">
+            <div class="source-row source-row--active">
+              <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+                <circle cx="18" cy="18" r="15" class="mini-ring__track"/>
+                <circle cx="18" cy="18" r="15" class="mini-ring__value"/>
+              </svg>
+              <span class="source-row__label">Write release notes</span>
+              <span class="mono">17:12</span>
+            </div>
+            <div class="source-row">
+              <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+                <circle cx="18" cy="18" r="15" class="mini-ring__track"/>
+                <path d="M15 12.5v11l9-5.5z" class="mini-ring__play"/>
+              </svg>
+              <span class="source-row__label text-muted">Review pull request</span>
+              <span class="fine-print">25 min</span>
+            </div>
+            <div class="source-row">
+              <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+                <circle cx="18" cy="18" r="15" class="mini-ring__track"/>
+                <path d="M15 12.5v11l9-5.5z" class="mini-ring__play"/>
+              </svg>
+              <span class="source-row__label text-muted">Plan sprint demo</span>
+              <span class="fine-print">50 min</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="feature__copy">
+            <span class="badge">Included</span>
+            <h3 class="feature__title">Quiet the apps that pull you away.</h3>
+            <p class="lead">Choose which apps can't reach you while a timer runs. Their notifications stay silent until your focus session ends.</p>
+          </div>
+          <fieldset class="panel feature__visual app-list">
+            <legend class="app-list__legend">Silence during focus</legend>
+            <div data-app-list></div>
+          </fieldset>
+        </article>
+
+        <article class="feature feature--reversed">
+          <div class="feature__copy">
+            <span class="badge">Included</span>
+            <h3 class="feature__title">Always there on your desktop.</h3>
+            <p class="lead">DeskFocus lives as a widget, so today's plan and your running timer are a glance away instead of buried in another window.</p>
+          </div>
+          <div class="desktop-mock feature__visual" aria-hidden="true">
+            <div class="desktop-mock__menubar">
+              <span>Finder</span><span>File</span><span>Edit</span><span>View</span>
+            </div>
+            <div class="desktop-mock__widget">
+              <div class="desktop-mock__row">
+                <span class="widget__title">Today</span>
+                <span class="text-accent">24:10</span>
+              </div>
+              <div class="progress"><div class="progress__value"></div></div>
+              <span>Write release notes</span>
+              <span class="text-muted">Review pull request</span>
+              <span class="text-muted">Plan sprint demo</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- How it works: three numbered steps. -->
+    <section id="how" class="section section--bordered" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">How it works</span>
+          <h2 id="how-title" class="section-title">Three steps to a focused day.</h2>
+        </div>
+        <ol class="steps">
+          <li class="panel step">
+            <span class="step__number">1</span>
+            <h3 class="step__title">Connect your lists</h3>
+            <p class="text-muted">Sign in to iCloud and Google once. Today's reminders, events and tasks appear in the widget.</p>
+          </li>
+          <li class="panel step">
+            <span class="step__number">2</span>
+            <h3 class="step__title">Pick what matters now</h3>
+            <p class="text-muted">Choose one task from today's list and set how long you want to work on it.</p>
+          </li>
+          <li class="panel step">
+            <span class="step__number">3</span>
+            <h3 class="step__title">Focus, then check it off</h3>
+            <p class="text-muted">Start the timer, let your chosen apps go quiet, and tick the task when the session ends.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FAQ: native details elements, no JS needed. -->
+    <section id="faq" class="section section--bordered" aria-labelledby="faq-title">
+      <div class="container container--narrow">
+        <h2 id="faq-title" class="section-title text-center">Questions</h2>
+        <div class="faq">
+          <details class="faq__item">
+            <summary class="faq__question">Where do my tasks come from?<svg class="faq__chevron icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <p class="faq__answer">From iCloud Reminders, Google Calendar and Google Tasks. DeskFocus shows what's due today from all three in one list.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">What happens to notifications during focus?<svg class="faq__chevron icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <p class="faq__answer">Notifications from the apps you selected are held back while a timer runs. Everything else works as usual.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Is it on the Mac App Store?<svg class="faq__chevron icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <p class="faq__answer">No — DeskFocus is a direct download from this site.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Which Macs does it run on?<svg class="faq__chevron icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <p class="faq__answer">Any Mac running [MACOS VERSION] or later.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing call to action. -->
+    <section id="download" class="section section--bordered" aria-labelledby="download-title">
+      <div class="container cta">
+        <h2 id="download-title" class="cta__title">Ready for a calmer desk?</h2>
+        <p class="lead">Get DeskFocus for your Mac.</p>
+        <div class="button-row button-row--center">
+          <a class="button button--primary" href="https://github.com/bilgaaaaa/deskfocus/releases/latest">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>
+            Download for macOS
+          </a>
+          <a class="button button--ghost" href="https://github.com/bilgaaaaa/deskfocus">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <span>© <span data-current-year>2026</span> DeskFocus</span>
+      <ul class="site-footer__links">
+        <li><a href="https://github.com/bilgaaaaa/deskfocus">GitHub</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="mailto:[CONTACT EMAIL]">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
