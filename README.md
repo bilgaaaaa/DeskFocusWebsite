@@ -1,6 +1,6 @@
-# DeskFocus Website
+# Deskfocus Website
 
-Landing page for [DeskFocus](https://github.com/bilgaaaaa/deskfocus), a macOS widget that combines today's tasks with a focus timer.
+Landing page for [Deskfocus](https://github.com/bilgaaaaa/deskfocus), a macOS widget that combines today's tasks with a focus timer.
 
 Live site: https://bilgaaaaa.github.io/DeskFocusWebsite/
 
