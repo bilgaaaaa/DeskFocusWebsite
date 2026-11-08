@@ -2,7 +2,7 @@
 
 Landing page for [Deskfocus](https://github.com/bilgaaaaa/deskfocus), a macOS widget that combines today's tasks with a focus timer.
 
-Live site: https://bilgaaaaa.github.io/DeskFocusWebsite/
+Live site: https://deskfocus.bilgalog.dev/ (the `CNAME` file sets this domain for GitHub Pages; its DNS is a CNAME record `deskfocus` → `bilgaaaaa.github.io` at Cloudflare, DNS only)
 
 Plain HTML, CSS and JavaScript — no build step, no dependencies.
 
