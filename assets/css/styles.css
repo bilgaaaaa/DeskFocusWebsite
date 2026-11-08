@@ -1,4 +1,4 @@
-/* DeskFocus website styles: tokens, base, components, then page sections. */
+/* Deskfocus website styles: tokens, base, components, then page sections. */
 
 :root {
   --color-bg: #000000;
@@ -334,6 +334,19 @@ fieldset {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+/* Full store name above the headline: Deskfocus is the name, "Tasks & Focus" the tagline. */
+.hero__eyebrow {
+  margin-bottom: 20px;
+  padding: 6px 14px;
+  border: 1px solid var(--color-accent-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-accent-surface);
+  color: var(--color-accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
 }
 
 .hero__title {
