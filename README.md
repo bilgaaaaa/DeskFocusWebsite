@@ -36,14 +36,10 @@ Then open http://localhost:8000.
 
 Settings → Pages → Source: **Deploy from a branch**, Branch: `main`, folder `/ (root)`.
 
-## Before launch
+## Legal pages
 
-Replace these placeholders:
+`privacy.html` and `terms.html` share the layout of the landing page and are linked from every footer. Contact address: hello@bilgalog.dev.
 
-- `[MACOS VERSION]` — minimum supported macOS version (`index.html`, appears twice)
-- `[CONTACT EMAIL]` — contact address (`index.html` footer, and throughout `privacy.html`)
-- `[DEVELOPER NAME]` — your full legal name as data controller (`privacy.html`)
-
-Keep `privacy.html` in sync with the apps: if they start using a new service (analytics, crash reporting, an update checker), add it there and update the effective date.
+Keep `privacy.html` in sync with the apps: if they start using a new service (analytics, crash reporting, a new payment provider), add it there and update the effective date. Change prices, plans or the refund rule in `terms.html` the same way.
 
 The download buttons point to `https://github.com/bilgaaaaa/deskfocus/releases/latest`.
