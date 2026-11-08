@@ -1,5 +1,5 @@
 /** Shared console logger so every module's output carries the same prefix. */
-const LOG_PREFIX = "[DeskFocus]";
+const LOG_PREFIX = "[Deskfocus]";
 
 export const log = (message) => console.info(`${LOG_PREFIX} ${message}`);
 
